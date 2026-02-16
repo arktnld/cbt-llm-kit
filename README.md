@@ -1,8 +1,6 @@
 # cbt-llm-kit
 
-A [spec-kit](https://github.com/spec-kit/spec-kit) extension for guided Cognitive Behavioral Therapy (CBT) thought records.
-
-Works with 16 AI providers: Claude, Gemini, Copilot, Cursor, Qwen, OpenCode, Windsurf, Kilo Code, Auggie, Roo, CodeBuddy, Qoder, Amazon Q, Amp, SHAI, Bob.
+Guided Cognitive Behavioral Therapy (CBT) thought records for any AI assistant. Clone, open with your preferred AI, and start recording.
 
 ## Features
 
@@ -13,22 +11,17 @@ Works with 16 AI providers: Claude, Gemini, Copilot, Cursor, Qwen, OpenCode, Win
 - **19 emotions** and **14 physical sensations** for precise tracking
 - **Core belief identification** across helplessness, unlovability, and worthlessness categories
 
-## Installation
+## Install
 
 ```bash
-# From catalog
-specify extension add cbt
-
-# From local directory (development)
-specify extension add --dev /path/to/spec-kit-cbt
-
-# From GitHub
-specify extension add https://github.com/arktnld/cbt-llm-kit
+curl -sL https://raw.githubusercontent.com/arktnld/cbt-llm-kit/main/install.sh | bash
 ```
+
+The installer asks which AI you use (Claude Code, Gemini CLI, or Cursor) and sets up the `/record`, `/checkin`, and `/analyze` commands automatically.
 
 ## Commands
 
-### `/cbt.record`
+### `/record`
 
 Create a new thought record. Guides you through all 12 steps:
 
@@ -45,22 +38,13 @@ Create a new thought record. Guides you through all 12 steps:
 11. Core beliefs
 12. Emotions (after) — re-rated intensity
 
-### `/cbt.checkin`
+### `/checkin`
 
 Daily reflection after completing your records. Reviews patterns from the day.
 
-### `/cbt.analyze`
+### `/analyze`
 
 Analyze patterns across all records over time. Identifies frequent distortions, emotion trends, recurring safety behaviors, and emerging core beliefs.
-
-## Configuration
-
-Copy `cbt-config-template.yml` to `cbt-config.yml` and customize:
-
-```yaml
-language: "en"        # "en" or "pt-br"
-records_path: "records/"
-```
 
 ## Data Files
 
@@ -71,11 +55,10 @@ records_path: "records/"
 ## Privacy
 
 All records are stored locally in `records/`. No data is sent to external services.
-Add `records/*.json` to your `.gitignore` if you don't want records in version control.
 
-## Built with spec-kit
+## Acknowledgments
 
-This extension is built on [spec-kit](https://github.com/spec-kit/spec-kit), a framework for creating AI-agent-agnostic development tools. spec-kit handles automatic command conversion across 16 AI providers — you write commands once in markdown, and spec-kit distributes them to Claude, Gemini, Copilot, Cursor, and more.
+Inspired by [spec-kit](https://github.com/spec-kit/spec-kit) and its approach to AI-agent-agnostic tooling.
 
 ## License
 
