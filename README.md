@@ -17,11 +17,11 @@ Guided Cognitive Behavioral Therapy (CBT) thought records for any AI assistant. 
 curl -sL https://raw.githubusercontent.com/arktnld/cbt-llm-kit/main/install.sh | bash
 ```
 
-The installer asks which AI you use (Claude Code, Gemini CLI, or Cursor) and sets up the `/record`, `/checkin`, and `/analyze` commands automatically.
+The installer asks which AI you use (Claude Code, Gemini CLI, or Cursor) and sets up the commands in the current project directory.
 
 ## Commands
 
-### `/record`
+### `/cbt:record`
 
 Create a new thought record. Guides you through all 12 steps:
 
@@ -38,11 +38,11 @@ Create a new thought record. Guides you through all 12 steps:
 11. Core beliefs
 12. Emotions (after) — re-rated intensity
 
-### `/checkin`
+### `/cbt:checkin`
 
 Daily reflection after completing your records. Reviews patterns from the day.
 
-### `/analyze`
+### `/cbt:analyze`
 
 Analyze patterns across all records over time. Identifies frequent distortions, emotion trends, recurring safety behaviors, and emerging core beliefs.
 

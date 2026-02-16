@@ -17,7 +17,7 @@ echo ""
 printf "  Choose [1-3]: "
 read -r choice </dev/tty
 
-# Download
+# Download data files
 if [ -d "$CBT_HOME" ]; then
   echo ""
   echo "  Updating..."
@@ -52,7 +52,7 @@ install_gemini_command() {
   local body
   body=$(sed '1,/^---$/d; 1,/^---$/d' "$src" | sed "s|data/|$CBT_HOME/data/|g; s|records/|$CBT_HOME/records/|g; s|\\\$ARGUMENTS|{{args}}|g")
 
-  cat > "$dir/$name.toml" <<TOMLEOF
+  cat > "$dir/cbt_$name.toml" <<TOMLEOF
 [command]
 description = "$desc"
 
@@ -65,19 +65,19 @@ TOMLEOF
 
 case $choice in
   1)
-    CMD_DIR="$HOME/.claude/commands"
+    CMD_DIR=".claude/commands/cbt"
     for cmd in record checkin analyze; do
       install_command "$CMD_DIR" "$cmd"
     done
     ;;
   2)
-    CMD_DIR="$HOME/.gemini/commands"
+    CMD_DIR=".gemini/commands"
     for cmd in record checkin analyze; do
       install_gemini_command "$CMD_DIR" "$cmd"
     done
     ;;
   3)
-    CMD_DIR="$HOME/.cursor/commands"
+    CMD_DIR=".cursor/commands/cbt"
     for cmd in record checkin analyze; do
       install_command "$CMD_DIR" "$cmd"
     done
@@ -92,9 +92,9 @@ echo ""
 echo "  Done! Commands installed to $CMD_DIR"
 echo ""
 echo "  Usage:"
-echo "    /record   - Create a new thought record"
-echo "    /checkin  - Daily reflection"
-echo "    /analyze  - Analyze patterns over time"
+echo "    /cbt:record   - Create a new thought record"
+echo "    /cbt:checkin  - Daily reflection"
+echo "    /cbt:analyze  - Analyze patterns over time"
 echo ""
 echo "  Records saved in: $CBT_HOME/records/"
 echo ""
