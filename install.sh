@@ -21,7 +21,7 @@ read -r choice </dev/tty
 if [ -d "$CBT_HOME" ]; then
   echo ""
   echo "  Updating..."
-  git -C "$CBT_HOME" pull --quiet
+  git -C "$CBT_HOME" pull origin main --quiet
 else
   echo ""
   echo "  Downloading..."
