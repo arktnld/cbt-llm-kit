@@ -1,0 +1,87 @@
+{
+  "record_questions": {
+    "order": "Follow this order for each record",
+    "steps": [
+      {
+        "step": 1,
+        "field": "situation",
+        "question": "What happened? Where, when, and with whom?"
+      },
+      {
+        "step": 2,
+        "field": "automatic_thought",
+        "question": "What went through your mind at that moment?"
+      },
+      {
+        "step": 3,
+        "field": "emotions.before",
+        "question": "What did you feel? Which emotion and what intensity from 0 to 100%?"
+      },
+      {
+        "step": 4,
+        "field": "physical_sensations",
+        "question": "What did your body feel? (muscle tension, racing heart, sweating, trembling, shortness of breath, etc.)"
+      },
+      {
+        "step": 5,
+        "field": "behavior",
+        "question": "What did you do at the time? How did you react? (left quickly, avoided eye contact, stayed silent, etc.)"
+      },
+      {
+        "step": 6,
+        "field": "evidence_for",
+        "question": "What supports this thought? What facts back it up?"
+      },
+      {
+        "step": 7,
+        "field": "evidence_against",
+        "question": "What contradicts this thought? What facts suggest it might not be true?"
+      },
+      {
+        "step": 8,
+        "field": "alternative_thought",
+        "question": "What would be a more balanced way to see this situation?"
+      },
+      {
+        "step": 9,
+        "field": "safety_behavior",
+        "question": "Did you do or do you do anything to avoid anxiety in this situation? (avoid places, times, people, etc.)"
+      },
+      {
+        "step": 10,
+        "field": "cognitive_distortions",
+        "question": "Looking at this thought, which cognitive distortion do you identify? (mind reading, personalization, catastrophizing, etc.)"
+      },
+      {
+        "step": 11,
+        "field": "core_beliefs",
+        "question": "Does this thought connect to any deeper belief about yourself? (helplessness, unlovability, worthlessness)"
+      },
+      {
+        "step": 12,
+        "field": "emotions.after",
+        "question": "After reflecting on the evidence and the alternative thought, how do the emotions feel now? What is the new intensity from 0 to 100%?"
+      }
+    ]
+  },
+  "daily_checkin_questions": {
+    "order": "Ask after all records for the day are done",
+    "steps": [
+      {
+        "step": 1,
+        "field": "how_i_feel_now",
+        "question": "How are you feeling now, after today's entire exercise?"
+      },
+      {
+        "step": 2,
+        "field": "patterns_identified",
+        "question": "What patterns or distortions did you notice repeating today?"
+      },
+      {
+        "step": 3,
+        "field": "observation",
+        "question": "Any general reflections about the day?"
+      }
+    ]
+  }
+}

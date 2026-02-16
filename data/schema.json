@@ -1,0 +1,187 @@
+{
+  "date": {
+    "type": "string",
+    "format": "YYYY-MM-DD"
+  },
+  "records": [
+    {
+      "id": {
+        "type": "number",
+        "description": "Sequential per day, starts at 1"
+      },
+      "situation": {
+        "type": "string"
+      },
+      "automatic_thought": {
+        "type": "string"
+      },
+      "emotions": {
+        "before": {
+          "type": "object { emotion: 0-100 }",
+          "possible_values": [
+            "anxiety",
+            "fear",
+            "anger",
+            "irritation",
+            "sadness",
+            "guilt",
+            "shame",
+            "disgust",
+            "jealousy",
+            "envy",
+            "frustration",
+            "helplessness",
+            "loneliness",
+            "insecurity",
+            "rejection",
+            "humiliation",
+            "discomfort",
+            "suffocation",
+            "feeling_watched"
+          ]
+        },
+        "after": {
+          "type": "object { emotion: 0-100 }",
+          "description": "Same emotions as before with updated intensity"
+        }
+      },
+      "physical_sensations": {
+        "type": "array",
+        "default": [],
+        "possible_values": [
+          "muscle_tension",
+          "racing_heart",
+          "sweating",
+          "trembling",
+          "shortness_of_breath",
+          "chest_tightness",
+          "headache",
+          "nausea",
+          "stomach_pain",
+          "dry_mouth",
+          "dizziness",
+          "tingling",
+          "chills",
+          "facial_flushing"
+        ]
+      },
+      "behavior": {
+        "type": "string | null",
+        "default": null
+      },
+      "evidence_for": {
+        "type": "array of strings"
+      },
+      "evidence_against": {
+        "type": "array of strings"
+      },
+      "alternative_thought": {
+        "type": "string"
+      },
+      "cognitive_distortions": {
+        "type": "array",
+        "default": [],
+        "possible_values": [
+          {
+            "id": "mind_reading",
+            "description": "Assuming you know what others are thinking without evidence"
+          },
+          {
+            "id": "personalization",
+            "description": "Attributing to yourself the responsibility for events you don't control"
+          },
+          {
+            "id": "catastrophizing",
+            "description": "Always imagining the worst possible scenario"
+          },
+          {
+            "id": "selective_abstraction",
+            "description": "Focusing on a negative detail and ignoring the broader context"
+          },
+          {
+            "id": "arbitrary_inference",
+            "description": "Reaching a conclusion without evidence or with contradicting evidence"
+          },
+          {
+            "id": "overgeneralization",
+            "description": "Drawing broad conclusions from a single isolated event"
+          },
+          {
+            "id": "magnification_minimization",
+            "description": "Exaggerating the negative or minimizing the positive"
+          },
+          {
+            "id": "all_or_nothing_thinking",
+            "description": "Seeing things in absolute terms: always, never, everyone, no one"
+          },
+          {
+            "id": "fortune_telling",
+            "description": "Predicting things will go wrong without a real basis"
+          },
+          {
+            "id": "emotional_reasoning",
+            "description": "Believing something is true because you feel it is"
+          },
+          {
+            "id": "labeling",
+            "description": "Assigning fixed labels to yourself or others (I'm a failure, he's bad)"
+          },
+          {
+            "id": "should_statements",
+            "description": "Thinking about how things should/must be instead of how they are"
+          },
+          {
+            "id": "disqualifying_the_positive",
+            "description": "Ignoring or invalidating positive experiences"
+          }
+        ]
+      },
+      "safety_behavior": {
+        "type": "string | null",
+        "default": null
+      },
+      "core_beliefs": {
+        "type": "array",
+        "default": [],
+        "possible_values": [
+          {
+            "category": "helplessness",
+            "examples": ["I am incapable", "I am weak", "I am incompetent", "I am vulnerable"]
+          },
+          {
+            "category": "unlovability",
+            "examples": ["I am undesirable", "Nobody loves me", "I am rejected", "I am different"]
+          },
+          {
+            "category": "worthlessness",
+            "examples": ["I have no value", "I am a failure", "I am useless", "I am not good enough"]
+          }
+        ]
+      },
+      "location": {
+        "type": "string"
+      },
+      "people_involved": {
+        "type": "array of strings",
+        "default": []
+      }
+    }
+  ],
+  "daily_checkin": {
+    "how_i_feel_now": {
+      "type": "string"
+    },
+    "total_records": {
+      "type": "number",
+      "default": 0
+    },
+    "patterns_identified": {
+      "type": "array of strings",
+      "default": []
+    },
+    "observation": {
+      "type": "string | null",
+      "default": null
+    }
+  }
+}

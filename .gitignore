@@ -1,0 +1,11 @@
+# Personal records (contain sensitive therapeutic data)
+records/*.json
+!records/.gitkeep
+
+# Local configuration overrides
+cbt-config.local.yml
+*-config.local.yml
+
+# OS files
+.DS_Store
+Thumbs.db

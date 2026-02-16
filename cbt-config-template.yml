@@ -1,0 +1,14 @@
+# CBT Thought Record Extension Configuration
+# Copy this to cbt-config.yml and customize for your project
+
+# Language for guided questions and prompts
+# Options: "en", "pt-br"
+language: "en"
+
+# Directory where daily record files are saved
+# Relative to the extension root
+records_path: "records/"
+
+# Environment Variable Overrides:
+# SPECKIT_CBT_LANGUAGE: Override language
+# SPECKIT_CBT_RECORDS_PATH: Override records_path
