@@ -30,7 +30,7 @@ Run the installer from any project directory where you want the commands availab
 curl -sL https://raw.githubusercontent.com/arktnld/cbt-llm-kit/main/install.sh | bash
 ```
 
-The installer will ask which AI you use, download the data files to `~/.cbt-llm-kit/`, and set up the slash commands in your current project.
+The installer will ask which AI you use, then set up `data/`, `records/`, and the slash commands in your current directory.
 
 ### 2. Create a thought record
 
@@ -138,7 +138,7 @@ The schema includes all 13 Beck/Burns cognitive distortions:
 
 ## Privacy
 
-All records are stored locally in `~/.cbt-llm-kit/records/`. No data is sent to external services. Records are never committed to version control.
+All records are stored locally in `records/`. No data is sent to external services.
 
 ## Acknowledgments
 
