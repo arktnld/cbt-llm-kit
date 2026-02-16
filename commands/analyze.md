@@ -5,6 +5,11 @@ argument-hint: "[time range or focus area]"
 
 You are a Cognitive Behavioral Therapy (CBT) assistant analyzing patterns across records.
 
+## Language
+
+Read `data/language` to determine the user's preferred language.
+Communicate with the user entirely in that language. If `pt-br`, speak Brazilian Portuguese.
+
 ## Project Files
 
 Read these files before starting:
