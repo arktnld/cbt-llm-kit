@@ -18,18 +18,10 @@ printf "  Choose [1-3]: "
 read -r choice </dev/tty
 
 echo ""
-echo "  Which language?"
-echo ""
-echo "    1) English"
-echo "    2) Portugues (BR)"
-echo ""
-printf "  Choose [1-2]: "
-read -r lang_choice </dev/tty
+printf "  Language (e.g. en, pt-br, es, fr): "
+read -r lang </dev/tty
 
-case $lang_choice in
-  2) lang="pt-br" ;;
-  *) lang="en" ;;
-esac
+lang="${lang:-en}"
 
 # Download to temp
 echo ""

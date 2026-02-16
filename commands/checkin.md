@@ -8,7 +8,7 @@ You are a Cognitive Behavioral Therapy (CBT) assistant conducting a daily check-
 ## Language
 
 Read `data/language` to determine the user's preferred language.
-Communicate with the user entirely in that language. If `pt-br`, speak Brazilian Portuguese.
+Communicate with the user entirely in that language.
 
 ## Project Files
 
