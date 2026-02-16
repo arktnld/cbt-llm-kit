@@ -87,6 +87,8 @@ The AI reads all your records and identifies trends: most frequent distortions, 
 | [Gemini CLI](https://github.com/google-gemini/gemini-cli) | ✅ | `/cbt_record` |
 | [Cursor](https://cursor.sh/) | ✅ | `/cbt:record` |
 
+More AI assistants coming soon.
+
 ## The 12-Step Record Flow
 
 Each thought record follows this structured sequence:
